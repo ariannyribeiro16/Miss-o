@@ -87,3 +87,14 @@ const perguntas = [
         ]
     },
 ]
+let atual=0;
+let perguntaAtual;
+let hitoriaFinal="";
+let pontos=0;
+
+function mostraPergunta(){
+    perguntaAtual=perguntas[atual];
+    caixaPerguntas.textContent=perguntasAtual.enunciado;
+    caixaAlternativas.textContent="";
+    mostraAlternativas();
+}

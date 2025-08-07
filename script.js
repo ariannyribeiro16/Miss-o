@@ -98,3 +98,11 @@ function mostraPergunta(){
     caixaAlternativas.textContent="";
     mostraAlternativas();
 }
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas){
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textcontent = alternativa.texto;
+        botaoalternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
+}
